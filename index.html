@@ -1,0 +1,530 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Sunset Hills</title>
+
+    <!--Favicon-->
+    <link rel="shortcut icon" type="image/x-icon" href="Images/favicon.ico">
+
+    <!-- Bootstrap core CSS -->
+    <link href="Content/bootstrap.min.css" rel="stylesheet" />
+
+    <!-- Custom fonts for this template -->
+    <link href="Content/all.min.css" rel="stylesheet" />
+    <link href="Content/simple-line-icons.css" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Catamaran:100,200,300,400,500,600,700,800,900" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Muli" rel="stylesheet">
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans|Maven+Pro:500' rel='stylesheet' type='text/css'>
+
+    <!-- Plugin CSS -->
+    <link href="Content/device-mockups.min.css" rel="stylesheet" />
+    <link href="../Content/prism.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+
+    <!-- Custom styles for this template -->
+    <link href="Content/new-age.min.css" rel="stylesheet" />
+
+    <style>
+        .orange {
+            background-color: #e66c1a;
+            color: #ffffff;
+        }
+
+        .btn:active {
+            transform: scale(0.98);
+        }
+
+        .noDisplay {
+            ;
+        }
+
+        .display {
+            display: block;
+        }
+    </style>
+    <style>
+        .myForm {
+            display: inline-flex;
+            width: 100%;
+            height: calc(20em + 5rem + 2px);
+            padding: .375rem .75rem;
+            font-size: 1rem;
+            font-weight: 400;
+            line-height: 1.5;
+            color: #495057;
+            background-color: #fff;
+            background-clip: padding-box;
+            border: 1px solid #ced4da;
+            border-radius: .25rem;
+            transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out
+        }
+
+        .myFont {
+            font-family: Maven Pro
+        }
+    </style>
+    <style>
+        table {
+            font-family: arial, sans-serif;
+            border-collapse: collapse;
+            width: 100%;
+        }
+
+        td, th {
+            border: 1px solid #dddddd;
+            text-align: left;
+            padding: 4px;
+        }
+
+        tr:nth-child(even) {
+            background-color: #dddddd;
+        }
+
+        .main {
+            background: linear-gradient(to left, #000000, #e8500d);
+            padding-top: 0;
+            margin-top: 0;
+            float: left;
+            width: 100%;
+            position: absolute;
+            bottom: 0;
+            left: 0%;
+            height: 5rem;
+        }
+
+        .arrow-wrap {
+            position: absolute;
+            z-index: 1;
+            left: 50%;
+            top: -5em;
+            margin-left: -5em;
+            background: #111;
+            width: 10em;
+            height: 10em;
+            padding: 4em 2em;
+            border-radius: 50%;
+            font-size: 0.5em;
+            display: block;
+            box-shadow: 0px 0px 5px 0px #333;
+        }
+
+        .arrow {
+            float: left;
+            position: relative;
+            width: 0px;
+            height: 0px;
+            border-style: solid;
+            border-width: 3em 3em 0 3em;
+            border-color: #ffffff transparent transparent transparent;
+            -webkit-transform: rotate(360deg)
+        }
+
+            .arrow:after {
+                content: '';
+                position: absolute;
+                top: -3.2em;
+                left: -3em;
+                width: 0px;
+                height: 0px;
+                border-style: solid;
+                border-width: 3em 3em 0 3em;
+                border-color: #111 transparent transparent transparent;
+                -webkit-transform: rotate(360deg)
+            }
+
+        .arrow-wrap:hover .hint {
+            opacity: 1;
+        }
+
+
+        @-webkit-keyframes arrows {
+            0% { top: 0; }
+
+            10% { top: 12%; }
+
+            20% { top: 0; }
+
+            30% { top: 12%; }
+
+            40% { top: -12%; }
+
+            50% { top: 12%; }
+
+            60% { top: 0; }
+
+            70% { top: 12%; }
+
+            80% { top: -12%; }
+
+            90% { top: 12%; }
+
+            100% { top: 0; }
+        }
+
+        .arrow-wrap .arrow {
+            -webkit-animation: arrows 2.8s 0.4s;
+            -webkit-animation-delay: 3s;
+        }
+
+        @media (max-width:575.98px) {
+            .arrow, .arrow-wrap, .main {
+                display: none;
+            }
+        }
+    </style>
+
+</head>
+
+<body id="page-top">
+
+    <nav class="navbar navbar-expand-md navbar-light fixed-top" id="mainNav">
+        <div class="container">
+            <div class="navbar-brand js-scroll-trigger dropdown">
+                <a class="dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    More Challenges
+                </a>
+                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                    <a class="dropdown-item" href="#">FizzBuzz</a>
+                    <a class="dropdown-item" href="#">Sum of All Fears</a>
+                    <a class="dropdown-item" href="#">TacocaT</a>
+                </div>
+            </div>
+            <button class="navbar-toggler" data-toggle="collapse" data-target="#navbarResponsive"><span class="navbar-toggler-icon"></span></button>
+            <div class="collapse navbar-collapse" id="navbarResponsive">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a class="nav-link js-scroll-trigger" href="#home">Sunset Hills!</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link js-scroll-trigger" href="#code">View Code</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link js-scroll-trigger" href="//dragon-nates-site.netlify.app" target="_blank">Portfolio</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link js-scroll-trigger" href="#features">Git</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link js-scroll-trigger" href="//dragon-nates-site.netlify.app/#contactus" target="_blank">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <header class="masthead" id="home">
+        <div class="container h-100">
+            <div class="row h-100">
+                <div class="col-lg-6 my-auto">
+                    <div class="header-content" style="text-align: left;">
+                        <div class="card col-lg-12 mb-4" style="background-color: black;">
+                            <div class="card-body">
+                                <h1 class="card-title myFont'">Sunset Hills</h1>
+                                <h3 class="card-subtitle mb-2 text-muted myFont">A Coding Challenge</h3>
+                                <p class="card-text">In this coding challenge, a user may enter in a series of number values that correspond to building heights running from left to right. There is a sunset happening off to the left of the buildings and depending on their height they may see it or not. The program compiles an array of the user inputs and returns two things: how many buildings can see the sunset and which buildings they are.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="col-lg-6 my-auto">
+                    <div class="device-container">
+                        <div class="device-mockup iphone6_plus portrait white">
+                            <div class="device" id="thePhone">
+                                <div class="screen" style="overflow: auto; overflow: hidden;">
+                                    <!-- Demo image for screen mockup, you can put an image here, some HTML, an animation, video, or anything else! -->
+                                    <div class="col-lg-12" style="width:100%; padding-top: 7rem">
+                                        <div id="shake" row style="padding-top: 1rem; text-align: center;">
+                                            <div row style="text-align: center;">
+                                                <div class="input-group flex-nowrap">
+                                                    <div class="input-group-prepend">
+                                                        <span class="input-group-text orange" style="width: 6.25rem">Building A</span>
+                                                    </div>
+                                                    <input type="number" autocomplete="off" class="form-control numOnly" placeholder="Enter a number!" id="input1" maxlength="3">
+                                                </div>
+                                            </div>
+                                            <div row style="text-align: center;">
+                                                <div class="input-group flex-nowrap" style="padding-top: .25rem">
+                                                    <div class="input-group-prepend">
+                                                        <span class="input-group-text orange" style="width: 6.25rem">Building B</span>
+                                                    </div>
+                                                    <input type="number" autocomplete="off" class="form-control numOnly" placeholder="Enter a number!" id="input2" maxlength="3">
+                                                </div>
+                                            </div>
+                                            <div row style="text-align: center;">
+                                                <div class="input-group flex-nowrap" style="padding-top: .25rem">
+                                                    <div class="input-group-prepend">
+                                                        <span class="input-group-text orange" style="width: 6.25rem">Building C</span>
+                                                    </div>
+                                                    <input type="number" autocomplete="off" class="form-control numOnly" placeholder="Enter a number!" id="input3" maxlength="3">
+                                                </div>
+                                            </div>
+                                            <div row style="text-align: center;">
+                                                <div class="input-group flex-nowrap" style="padding-top: .25rem">
+                                                    <div class="input-group-prepend">
+                                                        <span class="input-group-text orange" style="width: 6.25rem">Building D</span>
+                                                    </div>
+                                                    <input type="number" autocomplete="off" class="form-control numOnly" placeholder="Enter a number!" id="input4" maxlength="3">
+                                                </div>
+                                            </div>
+                                            <div row style="text-align: center;">
+                                                <div class="input-group flex-nowrap" style="padding-top: .25rem">
+                                                    <div class="input-group-prepend">
+                                                        <span class="input-group-text orange" style="width: 6.25rem">Building E</span>
+                                                    </div>
+                                                    <input type="number" autocomplete="off" class="form-control numOnly" placeholder="Enter a number!" id="input5" maxlength="3">
+                                                </div>
+                                            </div>
+                                            <div row style="padding-top: 1rem; text-align: center;">
+                                                <button class="btn btn-outline btn-xl js-scroll-trigger" type="button" id="Sundial" data-target="#exampleModal">
+                                                    Sundial
+                                                </button>
+                                            </div>
+                                            <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                                <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+                                                    <div class="modal-content" id="inModal">
+                                                        <div class="modal-header" style="background-color: #e8500d;">
+                                                            <h5 class="modal-title" id="exampleModalLabel">What a beautiful view!</h5>
+                                                            <button type="button" class="close" data-dismiss="modal" aria-label="Close" style="color: #ffffff">
+                                                                <span aria-hidden="true">&times;</span>
+                                                            </button>
+                                                        </div>
+                                                        <div class="modal-body">
+                                                            <div class="input-group-prepend">
+                                                                <span class="input-group-text orange" style="width: 6.25rem;">Results</span>
+                                                                <span id="output" style="color: #000000;"></span>
+                                                            </div>
+                                                            <div class="modal-footer">
+                                                                <button type="button" class="btn btn-secondary orange" data-dismiss="modal">Try Again!</button>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="button" id="phoneButton">
+                                    <!-- You can hook the "home button" to some JavaScript events or just remove it -->
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="mobile-hide">
+                    <section class="main">
+                        <a class="arrow-wrap" href="#code">
+                            <span class="arrow"></span>
+                        </a>
+                    </section>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <section class="download bg-primary text-center" id="code">
+        <div class="container">
+            <div class="header-content" style="text-align: left;">
+                <div class="card col-lg-12 mb-1" style="background-color: black;">
+                    <div class="card-body" style="color: #ffffff">
+                        <h1 class="card-title myFont">Code View</h1>
+                        <p class="card-text myFont">Here's my Javascript behind the action!</p>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-12 mx-auto">
+                            <pre class="language-markup responsive">
+<code class="language-js">
+    //The Big function
+
+    function Sunset() {
+
+    //Grab the user inputs as numbers
+        let val1 = Number($("#input1").val())
+        let val2 = Number($("#input2").val())
+        let val3 = Number($("#input3").val())
+        let val4 = Number($("#input4").val())
+        let val5 = Number($("#input5").val())
+
+    //Put them in our array
+        var buildArray = [val1, val2, val3, val4, val5];
+
+    //Set the array to always include first value
+        var currentBuild = buildArray[0];
+        var outputArray = [currentBuild];
+
+    //Message format to swap with user inputs
+        var outputNames = [` Building A at a height of ${buildArray[0]} units`,` Building B at a height of ${buildArray[1]} units`, ` Building C at a height of ${buildArray[2]} units`, ` Building D at a height of ${buildArray[3]} units`, ` Building E at a height of ${buildArray[4]} units`];
+
+    //Missed input message
+        if (val1 == "") {
+            Swal.fire({
+                icon: 'error',
+                title: 'Oops...',
+                text: 'You missed some input!',
+                confirmButtonText: 'Go Back',
+            });
+
+    //Else success case swap values with messages and replace first input with first message
+        } else {
+            for (let i = 0; i < buildArray.length; i++) {
+                if (buildArray[i] > currentBuild) {
+                    currentBuild = buildArray[i];
+                    outputArray.push(outputNames[i]);
+                    outputArray.forEach(function (item, i) { if (item == val1) outputArray[i] = ` Building A at a height of ${buildArray[0]} units` });
+                };
+            };
+
+    //If first building taller than all others
+            stringArray = [`Only Building A at a height of ${buildArray[0]} units can see the Sun.`];
+
+            if (outputArray.length == 1) {
+                $("#output").html(`${stringArray[0]}`)
+
+    //Message format to output
+            } else {
+                $("#output").html(`There are ${outputArray.length} buildings that can see the Sun and those are as follows: ${outputArray}.`)
+            };
+
+    //Open Modal on success case
+            $("#exampleModal").modal()
+        };
+    }
+
+    //Button to execute
+    document.getElementById("Sundial").addEventListener("click", function () {
+        Sunset()
+    })
+
+    //Regex number only input restriction
+    $(".numOnly").keypress(function (e) {
+        if (!(e.keyCode >= 48 && e.keyCode <= 57) || (e.keyCode >= 96 && e.keyCode <= 105)) {
+            return false;
+        };
+    });
+
+    //Fun phone animation
+    function shakeScreen() {
+        document.getElementById("shake").setAttribute("class", "animate__animated animate__shakeY")
+    }
+    //Apply the animation functions
+    function reset() {
+        document.getElementById("shake").setAttribute("class", "")
+    }
+    document.getElementById("phoneButton").addEventListener("dblclick", shakeScreen)
+    document.getElementById("thePhone").addEventListener("click", reset)
+</code>
+                            </pre>
+                        </div>
+                    </div>
+                </div>
+    </section>
+
+    <script>
+        //this is where we apply opacity to the arrow
+        $(window).scroll(function () {
+
+            //get scroll position
+            var topWindow = $(window).scrollTop();
+            //multipl by 1.5 so the arrow will become transparent half-way up the page
+            var topWindow = topWindow * 1.5;
+
+            //get height of window
+            var windowHeight = $(window).height();
+
+            //set position as percentage of how far the user has scrolled
+            var position = topWindow / windowHeight;
+            //invert the percentage
+            position = 1 - position;
+
+            //define arrow opacity as based on how far up the page the user has scrolled
+            //no scrolling = 1, half-way up the page = 0
+            $('.arrow-wrap').css('opacity', position);
+
+        });
+
+
+
+
+
+
+        //Code stolen from css-tricks for smooth scrolling:
+        $(function () {
+            $('a[href*=#]:not([href=#])').click(function () {
+                if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') && location.hostname == this.hostname) {
+                    var target = $(this.hash);
+                    target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
+                    if (target.length) {
+                        $('html,body').animate({
+                            scrollTop: target.offset().top
+                        }, 1000);
+                        return false;
+                    }
+                }
+            });
+        });//this is where we apply opacity to the arrow
+        $(window).scroll(function () {
+
+            //get scroll position
+            var topWindow = $(window).scrollTop();
+            //multipl by 1.5 so the arrow will become transparent half-way up the page
+            var topWindow = topWindow * 1.5;
+
+            //get height of window
+            var windowHeight = $(window).height();
+
+            //set position as percentage of how far the user has scrolled
+            var position = topWindow / windowHeight;
+            //invert the percentage
+            position = 1 - position;
+
+            //define arrow opacity as based on how far up the page the user has scrolled
+            //no scrolling = 1, half-way up the page = 0
+            $('.arrow-wrap').css('opacity', position);
+
+        });
+
+
+
+
+
+
+        //Code stolen from css-tricks for smooth scrolling:
+        $(function () {
+            $('a[href*=#]:not([href=#])').click(function () {
+                if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') && location.hostname == this.hostname) {
+                    var target = $(this.hash);
+                    target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
+                    if (target.length) {
+                        $('html,body').animate({
+                            scrollTop: target.offset().top
+                        }, 1000);
+                        return false;
+                    }
+                }
+            });
+        });
+    </script>
+
+    <!-- Bootstrap core JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" integrity="sha512-bLT0Qm9VnAYZDflyKcBaQ2gg0hSYNQrJ8RilYldYQ1FxQYoCLtUjuuRuZo+fjqhx/qtq/1itJ0C2ejDxltZVFg==" crossorigin="anonymous"></script>
+    <script src="Scripts/bootstrap.bundle.min.js"></script>
+
+    <!-- Plugin JavaScript -->
+    <script src="Scripts/jquery.easing.min.js"></script>
+    <script src="Scripts/prism.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
+
+    <!-- Custom scripts for this template -->
+    <script src="Scripts/new-age.min.js"></script>
+    <script src="Scripts/Custom.js"></script>
+</body>
+
+</html>
