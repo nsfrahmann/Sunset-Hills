@@ -10,14 +10,18 @@ function Sunset() {
     let val5 = Number($("#input5").val())
 
 //Put them in our array
-    var buildArray = [val1, val2, val3, val4, val5];
+    let buildArray = [val1, val2, val3, val4, val5];
 
 //Set the array to always include first value
-    var currentBuild = buildArray[0];
-    var outputArray = [currentBuild];
+    let currentBuild = buildArray[0];
+    let outputArray = [currentBuild];
 
 //Message format to swap with user inputs
-    var outputNames = [` Building A at a height of ${buildArray[0]} units`,` Building B at a height of ${buildArray[1]} units`, ` Building C at a height of ${buildArray[2]} units`, ` Building D at a height of ${buildArray[3]} units`, ` Building E at a height of ${buildArray[4]} units`];
+    let outputNames = [` Building A at a height of ${buildArray[0]} units`,
+        ` Building B at a height of ${buildArray[1]} units`,
+        ` Building C at a height of ${buildArray[2]} units`,
+        ` Building D at a height of ${buildArray[3]} units`,
+        ` Building E at a height of ${buildArray[4]} units`];
 
 //Missed input message
     if (val1 == "") {
@@ -34,7 +38,8 @@ function Sunset() {
             if (buildArray[i] > currentBuild) {
                 currentBuild = buildArray[i];
                 outputArray.push(outputNames[i]);
-                outputArray.forEach(function (item, i) { if (item == val1) outputArray[i] = ` Building A at a height of ${buildArray[0]} units` });
+                outputArray.forEach(function (item, i)
+                { if (item == val1) outputArray[i] = ` Building A at a height of ${buildArray[0]} units` });
             };
         };
 

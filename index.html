@@ -184,7 +184,6 @@
                 </a>
                 <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
                     <a class="dropdown-item" href="//nates-fizzbuzz-solution.netlify.app" target="_blank">FizzBuzz</a>
-                    <a class="dropdown-item" href="#">Sum of All Fears</a>
                     <a class="dropdown-item" href="//nates-tacocat-solution.netlify.app" target="_blank">TacocaT</a>
                 </div>
             </div>
@@ -204,7 +203,7 @@
                         <a class="nav-link js-scroll-trigger" href="#features">Git</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link js-scroll-trigger" href="//dragon-nates-site.netlify.app/#contactus" target="_blank">Contact</a>
+                        <a class="nav-link js-scroll-trigger" href="//dragon-nates-site.netlify.app/#contactme" target="_blank">Contact</a>
                     </li>
                 </ul>
             </div>
@@ -229,52 +228,52 @@
                 <div class="col-lg-6 my-auto">
                     <div class="device-container">
                         <div class="device-mockup iphone6_plus portrait white">
-                            <div class="device" id="thePhone">
+                            <div class="device" id="thePhone" style="max-height: 550px; max-width: 300px;">
                                 <div class="screen" style="overflow: auto; overflow: hidden;">
                                     <!-- Demo image for screen mockup, you can put an image here, some HTML, an animation, video, or anything else! -->
                                     <div class="col-lg-12" style="width:100%; padding-top: 7rem">
                                         <div id="shake" row style="padding-top: 1rem; text-align: center;">
-                                            <div row style="text-align: center;">
+                                            <div style="text-align: center;">
                                                 <div class="input-group flex-nowrap">
                                                     <div class="input-group-prepend">
                                                         <span class="input-group-text orange" style="width: 6.25rem">Building A</span>
                                                     </div>
-                                                    <input type="number" autocomplete="off" class="form-control numOnly" placeholder="Enter a number!" id="input1" maxlength="3">
+                                                    <input type="number" autocomplete="off" class="form-control numOnly" placeholder="Any number!" id="input1" maxlength="3">
                                                 </div>
                                             </div>
-                                            <div row style="text-align: center;">
+                                            <div style="text-align: center;">
                                                 <div class="input-group flex-nowrap" style="padding-top: .25rem">
                                                     <div class="input-group-prepend">
                                                         <span class="input-group-text orange" style="width: 6.25rem">Building B</span>
                                                     </div>
-                                                    <input type="number" autocomplete="off" class="form-control numOnly" placeholder="Enter a number!" id="input2" maxlength="3">
+                                                    <input type="number" autocomplete="off" class="form-control numOnly" placeholder="Any number!" id="input2" maxlength="3">
                                                 </div>
                                             </div>
-                                            <div row style="text-align: center;">
+                                            <div style="text-align: center;">
                                                 <div class="input-group flex-nowrap" style="padding-top: .25rem">
                                                     <div class="input-group-prepend">
                                                         <span class="input-group-text orange" style="width: 6.25rem">Building C</span>
                                                     </div>
-                                                    <input type="number" autocomplete="off" class="form-control numOnly" placeholder="Enter a number!" id="input3" maxlength="3">
+                                                    <input type="number" autocomplete="off" class="form-control numOnly" placeholder="Any number!" id="input3" maxlength="3">
                                                 </div>
                                             </div>
-                                            <div row style="text-align: center;">
+                                            <div style="text-align: center;">
                                                 <div class="input-group flex-nowrap" style="padding-top: .25rem">
                                                     <div class="input-group-prepend">
                                                         <span class="input-group-text orange" style="width: 6.25rem">Building D</span>
                                                     </div>
-                                                    <input type="number" autocomplete="off" class="form-control numOnly" placeholder="Enter a number!" id="input4" maxlength="3">
+                                                    <input type="number" autocomplete="off" class="form-control numOnly" placeholder="Any number!" id="input4" maxlength="3">
                                                 </div>
                                             </div>
-                                            <div row style="text-align: center;">
+                                            <div style="text-align: center;">
                                                 <div class="input-group flex-nowrap" style="padding-top: .25rem">
                                                     <div class="input-group-prepend">
                                                         <span class="input-group-text orange" style="width: 6.25rem">Building E</span>
                                                     </div>
-                                                    <input type="number" autocomplete="off" class="form-control numOnly" placeholder="Enter a number!" id="input5" maxlength="3">
+                                                    <input type="number" autocomplete="off" class="form-control numOnly" placeholder="Any number!" id="input5" maxlength="3">
                                                 </div>
                                             </div>
-                                            <div row style="padding-top: 1rem; text-align: center;">
+                                            <div style="padding-top: 1rem; text-align: center;">
                                                 <button class="btn btn-outline btn-xl js-scroll-trigger" type="button" id="Sundial" data-target="#exampleModal">
                                                     Sundial
                                                 </button>
@@ -289,10 +288,10 @@
                                                             </button>
                                                         </div>
                                                         <div class="modal-body">
-                                                            <div class="input-group-prepend">
-                                                                <span class="input-group-text orange" style="width: 6.25rem;">Results</span>
-                                                                <span id="output" style="color: #000000;"></span>
+                                                            <div class="input-group-prepend mb-2">
+                                                                <span class="input-group-text orange" style="width: 6.25rem;">Results:</span>
                                                             </div>
+                                                                <span id="output" style="color: #000000;"></span>
                                                             <div class="modal-footer">
                                                                 <button type="button" class="btn btn-secondary orange" data-dismiss="modal">Try Again!</button>
                                                             </div>
@@ -345,14 +344,18 @@
         let val5 = Number($("#input5").val())
 
     //Put them in our array
-        var buildArray = [val1, val2, val3, val4, val5];
+        let buildArray = [val1, val2, val3, val4, val5];
 
     //Set the array to always include first value
-        var currentBuild = buildArray[0];
-        var outputArray = [currentBuild];
+        let currentBuild = buildArray[0];
+        let outputArray = [currentBuild];
 
     //Message format to swap with user inputs
-        var outputNames = [` Building A at a height of ${buildArray[0]} units`,` Building B at a height of ${buildArray[1]} units`, ` Building C at a height of ${buildArray[2]} units`, ` Building D at a height of ${buildArray[3]} units`, ` Building E at a height of ${buildArray[4]} units`];
+        let outputNames = [` Building A at a height of ${buildArray[0]} units`,
+            ` Building B at a height of ${buildArray[1]} units`,
+            ` Building C at a height of ${buildArray[2]} units`,
+            ` Building D at a height of ${buildArray[3]} units`,
+            ` Building E at a height of ${buildArray[4]} units`];
 
     //Missed input message
         if (val1 == "") {
@@ -369,7 +372,8 @@
                 if (buildArray[i] > currentBuild) {
                     currentBuild = buildArray[i];
                     outputArray.push(outputNames[i]);
-                    outputArray.forEach(function (item, i) { if (item == val1) outputArray[i] = ` Building A at a height of ${buildArray[0]} units` });
+                    outputArray.forEach(function (item, i) 
+                    { if (item == val1) outputArray[i] = ` Building A at a height of ${buildArray[0]} units` });
                 };
             };
 
@@ -381,7 +385,8 @@
 
     //Message format to output
             } else {
-                $("#output").html(`There are ${outputArray.length} buildings that can see the Sun and those are as follows: ${outputArray}.`)
+                $("#output").html(`There are ${outputArray.length} 
+                buildings that can see the Sun and those are as follows: ${outputArray}.`)
             };
 
     //Open Modal on success case
